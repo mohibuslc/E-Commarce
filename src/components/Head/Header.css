@@ -1,0 +1,25 @@
+.head img{
+
+    height: 80px;
+  
+}
+
+.head{
+    
+    text-align: center;
+}
+
+.head nav{
+
+    background-color: black;
+    line-height: 45px;
+    font-size: 22px;
+}
+
+nav a{
+
+    text-decoration: none;
+    color:white;
+    margin-right: 20px;
+    padding: 5px;
+}
