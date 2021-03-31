@@ -7,9 +7,9 @@
                 <img src={logo} alt=""/>
                 <nav>
 
-                    <a href="/SHOP">Shop</a>
-                    <a href="/MANAGING">MANAGIN ORDER</a>
-                    <a href="/Contract">Contract</a>
+                    <a href="/SHOP">SHOP</a>
+                    <a href="/MANAGING">MANAGING ORDER</a>
+                    <a href="/Contract">CONTRACT</a>
                     
                     
 
