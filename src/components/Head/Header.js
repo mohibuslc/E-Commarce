@@ -5,14 +5,16 @@
         return (
             <div className ="head">
                 <img src={logo} alt=""/>
-                <nav>
+                <nav style={{textAlign:"left"}}>
 
                     <a href="/SHOP">SHOP</a>
-                    <a href="/MANAGING">MANAGING ORDER</a>
-                    <a href="/Contract">CONTRACT</a>
+                    <a href="/MANAGING">Order_Reviews</a>
+                    <a href="/Contract">Manage_Inventory</a>
                     
-                    
+            
+                
 
+        
                 </nav>
 
             </div>
