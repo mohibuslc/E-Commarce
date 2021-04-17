@@ -1,43 +1,56 @@
-    import React from 'react';
-    import fakeData from '../../fakeData';
-    import {useState} from 'react';
-    import '../Shop/Shop.css';
-    import Product from '../../components/Product/Product.js';
+        import React from 'react';
+        import fakeData from '../../fakeData';
+        import {useState} from 'react';
+        import '../Shop/Shop.css';
+        import Product from '../../components/Product/Product.js';
+        import Cart from '../Cart/Cart.js';
 
 
 
 
-    const Shop = () => {
+        const Shop = () => {
 
-        const first10 = fakeData.slice(0,10);
-        const [products, setProducts] = useState(first10);
-    
+            const first10 = fakeData.slice(0,10);
+            const [products, setProducts] = useState(first10);
 
-        
-        return (
-            
-            <div className="shop-container">
-    
-    <div className="product-container">
 
-   
-            {
 
-                products.map(kl => <Product product={kl}></Product>)
+            const [cart , setCart]= useState([]);
+
+            const handle = (product)=>{             // declare event handler : 
+
+                    const newCart = [...cart,product];
+                setCart (newCart);
+
             }
-       
+            
 
-    </div>
-            <div className="cart-container">
-
-            <h3> This Is Cart</h3>
-
-            </div>
+            return (
                 
+                <div className="shop-container">
+        
+        <div className="product-container">
 
     
-            </div>
-        );
-    };
+                {
 
-    export default Shop;
+                    products.map(kl => <Product
+                        handle = {handle}           // event handle Option : 
+                        
+                        product={kl}></Product>)
+                }
+        
+
+        </div>
+                <div className="cart-container">
+
+            
+
+            
+                    <Cart cart ={cart}></Cart>    
+                </div>
+            </div>
+            );
+        };
+
+        export default Shop;
